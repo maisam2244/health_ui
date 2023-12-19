@@ -20,8 +20,25 @@ class _Splash_ScreenState extends State<Splash_Screen> {
   Widget build(BuildContext context) {
     return Scaffold(
         body: Container(
-      child: Center(
-        child: Text("Splash Screen"),
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        crossAxisAlignment: CrossAxisAlignment.center,
+        children: [
+          Center(
+            child: CircleAvatar(
+              radius: 140,
+              backgroundImage: AssetImage("assets/logo/harees_logo.png"),
+            ),
+          ),
+          SizedBox(
+            height: 25,
+          ),
+          Center(
+              child: Text(
+            "Harees ",
+            style: TextStyle(fontSize: 30),
+          ))
+        ],
       ),
     ));
   }

@@ -4,9 +4,9 @@ import 'package:flutter/services.dart';
 import 'package:health/Resources/Button/mybutton.dart';
 import 'package:health/Resources/TextField/MyTextField.dart';
 import 'package:health/Resources/Utils/utils.dart';
-import 'package:health/View/Main_Pages/Home_page/home_page.dart';
 import 'package:health/View/User_Authentication/Login_page.dart';
 import 'package:health/View/User_Authentication/register_page.dart';
+import 'package:health/View/User_Pages/Home_page/home_page.dart';
 import 'login_with_phone.dart';
 
 class RegisterPage extends StatefulWidget {
@@ -55,23 +55,6 @@ class _RegisterPageState extends State<RegisterPage> {
               Form(
                   key: _FormKey,
                   child: Column(children: [
-                    // TextFormField(
-                    //   keyboardType: TextInputType.emailAddress,
-                    //   controller: emailController,
-                    //   decoration: const InputDecoration(
-                    //       labelText: "Email",
-                    //       icon: Icon(
-                    //         Icons.mail,
-                    //         color: Colors.deepPurple,
-                    //       ),
-                    //       hintText: "abc@abc.com"),
-                    //   validator: (value) {
-                    //     if (value!.isEmpty) {
-                    //       return "Enter email";
-                    //     }
-                    //     return null;
-                    //   },
-                    // ),
                     MyTextField(
                         controller: emailController,
                         obscureText: false,
@@ -82,24 +65,6 @@ class _RegisterPageState extends State<RegisterPage> {
                         obscureText: true,
                         labelText: "Password",
                         conditionText: "Password cannot be empty"),
-                    //   TextFormField(
-                    //     keyboardType: TextInputType.text,
-                    //     obscureText: true,
-                    //     controller: passwordController,
-                    //     decoration: const InputDecoration(
-                    //       labelText: "Password",
-                    //       icon: Icon(
-                    //         Icons.password_rounded,
-                    //         color: Colors.deepPurple,
-                    //       ),
-                    //     ),
-                    //     validator: (value) {
-                    //       if (value!.isEmpty) {
-                    //         return "Enter password";
-                    //       }
-                    //       return null;
-                    //     },
-                    //   ),
                   ])),
               const SizedBox(height: 50),
               RoundButton(

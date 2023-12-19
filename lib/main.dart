@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:health/View/Main_Pages/Home_page/home_page.dart';
 import 'package:health/View/Splash_Screen/splash_screen.dart';
+import 'package:health/View/User_Pages/Doctor_visit/doctor_visit.dart';
+import 'package:health/View/User_Pages/Laboratory/laboratory.dart';
+import 'package:health/ViewModel/Localization/localization.dart';
 import 'firebase_options.dart';
 import 'package:firebase_core/firebase_core.dart';
 
@@ -17,8 +19,11 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GetMaterialApp(
-      home: Splash_Screen(),
+      home: DoctorVisit(),
       debugShowCheckedModeBanner: false,
+      locale: Locale("en", "US"),
+      fallbackLocale: Locale("en", "US"),
+      translations: Language(),
     );
   }
 }
